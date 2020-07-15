@@ -8,6 +8,12 @@ namespace RockPaperScissors.Models
       {
         return "Draw";
       }
+      else if (player1 == "rock" && player2 == "scissors")
+      {
+        return "Player 1 Win";
+      }
+      
+
       return "dummy data so compiler doesn't complain";
     }
   }
