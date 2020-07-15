@@ -1,26 +1,31 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace RockPaperScissors.Models
 {
   public class Game
   {
-    public static string DetectWinner(string player1, string player2)
+    private static Random rnd = new Random();
+
+    public static string DetectWinner(string player1)
     {
+      player1 = ParseResponse(player1);
+      string player2 = AIResponse();
       if (player1 == player2) 
       {
-        return "Draw";
+        return "I picked " + player2 + "! We Drew!";
       }
       else if (player1 == "rock" && player2 == "scissors" || player1 == "scissors" && player2 == "paper" || player1 == "paper" && player2 == "rock")
       {
-        return "Player 1 Win";
+        return "I picked " + player2 + "! You Win!";
       }
       else if (player1 == "rock" && player2 == "paper" || player1 == "scissors" && player2 == "rock" || player1 == "paper" && player2 == "scissors")
       {
-        return "Player 2 Win";
+        return "I picked " + player2 + "! I Win!";
       }
       return "An error has occured";
     }
-    public static string ParseResponse(string playerInput)
+    private static string ParseResponse(string playerInput)
     {
       if (Regex.IsMatch(playerInput, "^rock$", RegexOptions.IgnoreCase))
       {
@@ -35,6 +40,23 @@ namespace RockPaperScissors.Models
         return "paper";
       }
       return "An error has occured";
+    }
+
+    private static string AIResponse()
+    {
+      int randomChoice = rnd.Next(3);
+      if (randomChoice == 0)
+      {
+        return "rock";
+      }
+      else if (randomChoice == 1)
+      {
+        return "paper";
+      }
+      else
+      {
+        return "scissors";
+      }
     }
   }
 }

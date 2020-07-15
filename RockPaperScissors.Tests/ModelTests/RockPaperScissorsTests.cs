@@ -64,5 +64,11 @@ namespace RockPaperScissors.Tests
       string player1Parsed = Game.ParseResponse("PAPER");
       Assert.AreEqual("paper", player1Parsed);
     }
+
+    [TestMethod]
+    public void DetectWinner_CanDetectWinnerWithParsedResponse_Player1Win()
+    {
+      Assert.AreEqual("Player 1 Win", Game.DetectWinner("RoCk", "SCISSORS"));
+    }
   }
 }
