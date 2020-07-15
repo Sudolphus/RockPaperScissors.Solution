@@ -4,7 +4,7 @@ namespace RockPaperScissors.Models
   {
     public static string DetectWinner(string player1, string player2)
     {
-      return "";
+      return "Draw";
     }
   }
 }
