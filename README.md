@@ -1,18 +1,24 @@
-# _{Application Name}_
+# _Rock Paper Scissors_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A friendly game in the console, 7.15.2020_
 
-#### By _**Micheal Hansen**_
+#### By _**Micheal Hansen & Deryck Jackson**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This application will play a game of rock, paper, and/or scissors._
 
 ## Specifications
 
 | Spec | Input | Output |
 | :--- | :---: | ---: |
-
+| Program detects if the game is drawn | Player 1 = "rock", Player 2 = "rock" | "Draw!" |
+| Program detects that Rock vs. Scissors is a Player 1 win | Player1 = "rock", Player 2 = "scissors" | "Player 1 Wins" |
+| Program detects that Rock vs. Paper is a Player 2 win | Player1 = "rock", Player2 = "paper" | "Player 2 Wins" |
+| Program detects that Scissors vs. Rock is a Player 2 win | Player1 = "scissors", Player2 = "rock" | "Player 2 Wins" |
+| Program detects that Scissors vs. Paper is a Player 1 win | Player1 = "scissors", Player2 = "paper" | "Player 1 Wins" |
+| Program detects that Paper vs. Rock is a Player 1 win | Player1 = "paper", Player2 = "rock" | "Player 1 Wins" |
+| Program detects that Paper vs. Scissors is a Player 2 win | Player1 = "paper", Player2 = "scissors" | "Player 2 Wins" |
 
 ## Setup/Installation Requirements
 
@@ -34,7 +40,7 @@ Running the program:
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_None currently known_
 
 ## Support and contact details
 
@@ -47,7 +53,7 @@ _Please reach out through my GitHub account._
 
 ### License
 
-Copyright (c) 2020 **_Micheal Hansen_**
+Copyright (c) 2020 **_Micheal Hansen & Deryck Jackson_**
 
 *Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
