@@ -8,7 +8,7 @@ namespace RockPaperScissors.Models
       {
         return "Draw";
       }
-      else if (player1 == "rock" && player2 == "scissors")
+      else if (player1 == "rock" && player2 == "scissors" || player1 == "scissors" && player2 == "paper")
       {
         return "Player 1 Win";
       }
