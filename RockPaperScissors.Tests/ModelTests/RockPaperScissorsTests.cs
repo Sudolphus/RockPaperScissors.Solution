@@ -33,5 +33,10 @@ namespace RockPaperScissors.Tests
     {
       Assert.AreEqual("Player 1 Win", Game.DetectWinner("scissors", "paper"));
     }
+    [TestMethod]
+    public void DetectWinner_PaperVRock_Player1Win()
+    {
+      Assert.AreEqual("Player 1 Win", Game.DetectWinner("paper", "rock"));
+    }
   }
 }
