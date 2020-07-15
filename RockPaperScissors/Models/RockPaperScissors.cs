@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace RockPaperScissors.Models
 {
   public class Game
@@ -16,9 +18,23 @@ namespace RockPaperScissors.Models
       {
         return "Player 2 Win";
       }
-      
-
-      return "dummy data so compiler doesn't complain";
+      return "An error has occured";
+    }
+    public static string ParseResponse(string playerInput)
+    {
+      if (Regex.IsMatch(playerInput, "^rock$", RegexOptions.IgnoreCase))
+      {
+        return "rock";
+      }
+      if (Regex.IsMatch(playerInput, "^scissors$", RegexOptions.IgnoreCase))
+      {
+        return "scissors";
+      }
+      if (Regex.IsMatch(playerInput, "^paper$", RegexOptions.IgnoreCase))
+      {
+        return "paper";
+      }
+      return "An error has occured";
     }
   }
 }

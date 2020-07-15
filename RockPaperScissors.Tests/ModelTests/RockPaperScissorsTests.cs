@@ -43,5 +43,26 @@ namespace RockPaperScissors.Tests
     {
       Assert.AreEqual("Player 2 Win", Game.DetectWinner("paper", "scissors"));
     }
+
+    [TestMethod]
+    public void ParseResponse_IgnoreCaseForRock_Rock()
+    {
+      string player1Parsed = Game.ParseResponse("RoCk");
+      Assert.AreEqual("rock", player1Parsed);
+    }
+
+    [TestMethod]
+    public void ParseResponse_IgnoreCaseForScissors_Scissors()
+    {
+      string player1Parsed = Game.ParseResponse("SciSSOrs");
+      Assert.AreEqual("scissors", player1Parsed);
+    }
+
+    [TestMethod]
+    public void ParseResponse_IgnoreCaseForPaper_Paper()
+    {
+      string player1Parsed = Game.ParseResponse("PAPER");
+      Assert.AreEqual("paper", player1Parsed);
+    }
   }
 }
